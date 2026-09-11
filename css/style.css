@@ -1,0 +1,23 @@
+
+:root{--red:#e30613;--black:#0a0a0a;--grey:#2d2d2d;--light:#f5f5f5}
+*{margin:0;padding:0;box-sizing:border-box;font-family:Inter,system-ui,sans-serif}
+body{background:var(--black);color:#fff}
+.top-red{height:4px;background:var(--red)}
+.nav{display:flex;justify-content:space-between;align-items:center;padding:12px 24px;background:#111;border-bottom:1px solid #222}
+.logo{display:flex;align-items:center;gap:12px}
+.logo img{height:42px}
+.btn{padding:10px 18px;border-radius:8px;border:none;cursor:pointer;font-weight:700;text-decoration:none;display:inline-flex;align-items:center;gap:8px}
+.btn-red{background:var(--red);color:#fff}
+.btn-green{background:#25D366;color:#fff}
+.btn-dark{background:var(--grey);color:#fff;border:1px solid #444}
+.card{background:#1a1a1a;border:1px solid #2a2a2a;border-top:3px solid var(--red);border-radius:12px;padding:16px}
+.input{width:100%;padding:12px;border-radius:8px;border:1px solid #333;background:#111;color:#fff;margin:6px 0}
+.badge{padding:4px 8px;border-radius:99px;font-size:11px;font-weight:800;background:var(--red)}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:16px}
+.hero{position:relative;min-height:70vh;display:flex;align-items:center;justify-content:center;text-align:center;background:url('../assets/bg.jpg') center/cover}
+.hero::after{content:'';position:absolute;inset:0;background:rgba(0,0,0,0.75)}
+.hero-inner{position:relative;z-index:2;max-width:800px;padding:24px}
+.cursive{font-family:'Dancing Script',cursive;color:var(--red)}
+.countdown{display:flex;gap:12px;justify-content:center;margin:20px 0}
+.count-box{background:var(--grey);padding:16px;border-radius:10px;min-width:70px;text-align:center;border-top:2px solid var(--red)}
+.count-box span{display:block;font-size:28px;font-weight:900}

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Senaoane Online - Community Website</title>
+<link rel="stylesheet" href="css/style.css">
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+<div class="top-red"></div>
+<div class="nav">
+  <div class="logo"><img src="assets/logo.png" onerror="this.src='https://i.imgur.com/8Km9tLL.png'"><b>SENAOANE ONLINE</b></div>
+  <div style="display:flex;gap:8px">
+    <a href="register.html" class="btn btn-dark">Register</a>
+    <a href="upload.html" class="btn btn-red">Upload</a>
+    <a href="forum.html" class="btn btn-dark">Forum</a>
+    <a href="https://wa.me/27765269828" class="btn btn-green">WhatsApp: 0765269828</a>
+  </div>
+</div>
+
+<div class="hero">
+  <div class="hero-inner">
+    <img src="assets/logo.png" style="height:80px;margin-bottom:16px" onerror="this.style.display='none'">
+    <p class="cursive" style="font-size:42px">The</p>
+    <h1 style="font-size:42px;font-weight:900;line-height:1">SENAOANE WEBSITE<br>COMING SOON</h1>
+    <p class="cursive" style="font-size:36px;margin-top:8px">Get involved!</p>
+    <p id="countdown-label" style="margin-top:20px;opacity:0.9"></p>
+    <div id="countdown" class="countdown"></div>
+    <div style="margin-top:20px;display:flex;gap:12px;justify-content:center;flex-wrap:wrap">
+      <a href="https://wa.me/27765269828" class="btn btn-green">WhatsApp Us</a>
+      <a href="https://facebook.com" target="_blank" class="btn btn-dark" style="background:#1877F2">Facebook Community</a>
+      <a href="register.html" class="btn btn-red">Join Database</a>
+    </div>
+  </div>
+</div>
+
+<div style="padding:32px;max-width:1200px;margin:auto">
+  <h2>What's Coming - Announcements</h2>
+  <div class="grid" style="margin-top:16px">
+    <a href="register.html" class="btn btn-red">Join Database</a></span><h3 style="margin-top:8px">Sports Announcements</h3><p>We give updates on local teams, fixtures score updates and eveents</p></div>
+    <div class="card"><span class="badge">COMMUNITY</span><h3 style="margin-top:8px">Community Meetings</h3><p>We give updates on loadshedding, water switch off, service delivery, community events</p></div>
+    <div class="card"><span class="badge">JOBS</span><h3 style="margin-top:8px">Jobs</h3><p>We make available access to Local jobs opportunities,post new jobs we find.</p></div>
+    <div class="card"><span class="badge">EVENTS</span><h3 style="margin-top:8px">Events</h3><p>We market festivals, business events, local fund raising events and cultural events</p></div>
+    <div class="card"><span class="badge">NEWS</span><h3 style="margin-top:8px">News</h3><p>We publish Breaking local news includind important news to the public</p></div>
+  <div class="card"><span class="badge">Funerals</span><h3 style="margin-top:8px">Funerals</h3><p>We announce local funerals includind dates of burials time and laces</p></div>
+  </div>
+
+  <h2 style="margin-top:40px">Latest Community Posts</h2>
+  <div id="latest-posts" class="grid" style="margin-top:16px"></div>
+</div>
+
+<footer style="background:#2d2d2d;border-top:3px solid #e30613;padding:16px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap">
+  <span><b>S</b> SENAOANE ONLINE - COMMUNITY WEBSITE</span>
+  <span>WhatsApp: 0765269828</span>
+</footer>
+
+<script src="js/app.js"></script>
+<script>
+fetch('data/posts.json').then(r=>r.json()).then(sample=>{
+  const existing = JSON.parse(localStorage.getItem('senaoane_posts')||'[]');
+  if(existing.length===0) localStorage.setItem('senaoane_posts', JSON.stringify(sample));
+  renderPosts('latest-posts');
+});
+</script>
+</body>
+</html>

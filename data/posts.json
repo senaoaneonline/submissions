@@ -1,0 +1,25 @@
+[
+  {
+    "id": "1",
+    "user_name": "Admin",
+    "category": "SPORTS",
+    "title": "Elkah Stadium Match - Soweto Derby",
+    "description": "Join us at Elkah Stadium this Saturday for local derby!",
+    "youtube_url": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+    "youtube_id": "dQw4w9WgXcQ",
+    "image_url": "",
+    "created_at": "2026-09-03",
+    "whatsapp": "0765269828"
+  },
+  {
+    "id": "2",
+    "user_name": "Community Leader",
+    "category": "COMMUNITY",
+    "title": "Community Meeting Tonight 6PM",
+    "description": "Loadshedding schedule discussion at Community Hall",
+    "youtube_url": "",
+    "youtube_id": "",
+    "image_url": "",
+    "created_at": "2026-09-04"
+  }
+]
